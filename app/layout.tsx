@@ -1,0 +1,4 @@
+import type {Metadata} from "next"; import {Inter,Manrope} from "next/font/google"; import "./globals.css"; import {StoreProvider} from "@/lib/store"; import Sidebar from "@/components/Sidebar";
+const inter=Inter({subsets:["latin"],variable:"--font-inter"}); const manrope=Manrope({subsets:["latin"],variable:"--font-manrope"});
+export const metadata:Metadata={title:"ORBIT — Make space for what matters",description:"AI-powered productivity assistant"};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" className={`${inter.variable} ${manrope.variable}`}><body><StoreProvider><div className="flex min-h-screen bg-bg text-ink"><Sidebar/><main className="min-w-0 flex-1 px-5 pb-10 pt-16 md:px-9 md:pt-7 max-w-[1200px] mx-auto w-full">{children}</main></div></StoreProvider></body></html>}

@@ -1,0 +1,10 @@
+export type Priority="Low"|"Medium"|"High"|"Urgent";
+export type TaskStatus="todo"|"in-progress"|"completed";
+export interface Subtask{id:string;taskId:string;title:string;is_completed:boolean}
+export interface Task{id:string;title:string;description:string;priority:Priority;status:TaskStatus;due_date:string;estimated_duration:number;category:string;created_at:string;updated_at:string;completed_at?:string}
+export interface Message{id:string;conversation_id:string;role:"user"|"assistant";content:string;created_at:string}
+export interface Conversation{id:string;title:string;created_at:string;updated_at:string}
+export interface MemoryItem{id:string;content:string;category:string;created_at:string}
+export interface Schedule{id:string;task_id?:string;title:string;date:string;start_time:string;end_time:string}
+export interface Settings{theme:"light"|"dark";language:"en"|"id";style:"concise"|"balanced"|"detailed";creativity:"low"|"medium"|"high";temperature:number;memoryEnabled:boolean;notifications:{daily:boolean;deadline:boolean;weekly:boolean}}
+export interface Profile{full_name:string;email:string;role:string}

@@ -1,0 +1,2 @@
+import type { Config } from "tailwindcss";
+const config: Config={content:["./app/**/*.{ts,tsx}","./components/**/*.{ts,tsx}","./lib/**/*.{ts,tsx}"],darkMode:"class",theme:{extend:{colors:{bg:"#F7F7F4",surface:"#FFFFFF",primary:"#769B88",primaryHover:"#648674",primarySoft:"#E7EFE9",ink:"#202522",muted:"#858A83",border:"#E8EAE5",danger:"#D96B65",warning:"#D6A45C",sidebarDark:"#202A27"},fontFamily:{heading:["var(--font-manrope)","sans-serif"],body:["var(--font-inter)","sans-serif"]},borderRadius:{sm:"6px",md:"10px",lg:"14px"}}},plugins:[]}; export default config;
